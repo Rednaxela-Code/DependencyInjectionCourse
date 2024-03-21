@@ -1,4 +1,8 @@
-﻿using System.Xml.Serialization;
+﻿IDataAccess dataAccess = new DataAccess();
+IBusiness biz = new Business(dataAccess);
+UserInterface ui = new UserInterface(biz);
+
+ui.Signup();
 
 public class UserInterface
 {
