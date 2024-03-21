@@ -5,6 +5,13 @@ public class UserInterface
     private string _userName;
     private string _password;
 
+    private IBusiness _business;
+
+    public UserInterface()
+    {
+        _business = new Business();
+    }
+
     private void GetData()
     {
         Console.Write("Enter User Name:");
@@ -16,24 +23,36 @@ public class UserInterface
     public void Signup()
     {
         GetData();
-
-        var biz = new Business();
-        biz.Signup(_userName, _password);
+        _business.Signup(_userName, _password);
     }
 }
 
-public class Business
+public interface IBusiness
 {
+    public void Signup(string userName, string password);
+}
+
+public class Business : IBusiness
+{
+    private IDataAccess _access;
+
+    public Business()
+    {
+        _access = new DataAccess();
+    }
     public void Signup(string userName, string password)
     {
-        var da = new DataAccess();
-        da.Signup(userName, password);
+        _access.Signup(userName, password);
     }
 }
 
-public class DataAccess
+public interface IDataAccess
 {
-    //Henk doet dit
+    public void Signup(string userName, string password)
+}
+
+public class DataAccess : IDataAccess
+{
     public void Signup(string userName, string password)
     {
         // Use EF to write data into SQL Server
