@@ -2,27 +2,19 @@
 
 public class UserInterface
 {
-    private string _userName;
-    private string _password;
-
     private IBusiness _business;
 
-    public UserInterface()
+    public UserInterface(IBusiness business)
     {
-        _business = new Business();
-    }
-
-    private void GetData()
-    {
-        Console.Write("Enter User Name:");
-        _userName = Console.ReadLine();
-        Console.Write("Enter Password:");
-        _password = Console.ReadLine();
+        _business = business;
     }
 
     public void Signup()
     {
-        GetData();
+        Console.Write("Enter User Name:");
+        string _userName = Console.ReadLine();
+        Console.Write("Enter Password:");
+        string _password = Console.ReadLine();
         _business.Signup(_userName, _password);
     }
 }
@@ -36,9 +28,9 @@ public class Business : IBusiness
 {
     private IDataAccess _access;
 
-    public Business()
+    public Business(IDataAccess access)
     {
-        _access = new DataAccess();
+        _access = access;
     }
     public void Signup(string userName, string password)
     {
@@ -48,7 +40,7 @@ public class Business : IBusiness
 
 public interface IDataAccess
 {
-    public void Signup(string userName, string password)
+    public void Signup(string userName, string password);
 }
 
 public class DataAccess : IDataAccess
