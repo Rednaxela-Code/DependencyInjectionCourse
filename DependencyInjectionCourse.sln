@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalBlog", "PersonalBlo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionalResolve", "ConditionalResolve\ConditionalResolve.csproj", "{63F5391E-B842-436B-B09D-6794026DA185}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddKeyResolve", "AddKeyResolve\AddKeyResolve.csproj", "{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddKeyResolve", "AddKeyResolve\AddKeyResolve.csproj", "{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDi", "WpfDi\WpfDi.csproj", "{545BD3D0-5CCB-4E89-8460-197F5797BDC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545BD3D0-5CCB-4E89-8460-197F5797BDC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545BD3D0-5CCB-4E89-8460-197F5797BDC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545BD3D0-5CCB-4E89-8460-197F5797BDC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545BD3D0-5CCB-4E89-8460-197F5797BDC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
