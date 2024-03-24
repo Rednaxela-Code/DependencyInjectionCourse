@@ -6,10 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<IDynamoDBContext, DynamoDBContext>();
-builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-builder.Services.AddScoped<IAuthorize, IpBasedAuthorizer>();
-builder.Services.AddScoped<ProtectorAttribute>();
+
+DynamoServices(builder);
 
 var app = builder.Build();
 
@@ -29,3 +27,11 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+static void DynamoServices(WebApplicationBuilder builder)
+{
+    builder.Services.AddSingleton<IDynamoDBContext, DynamoDBContext>();
+    builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+    builder.Services.AddScoped<IAuthorize, IpBasedAuthorizer>();
+    builder.Services.AddScoped<ProtectorAttribute>();
+}
