@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CouplingDemonstration", "DependencyInjectionCourse\CouplingDemonstration.csproj", "{9EDEECFE-AFDB-486F-BB1D-E6AF2F3AEE71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IServiceCollectionAndProviderDemonstration", "IServiceCollectionAndProviderDemonstration\IServiceCollectionAndProviderDemonstration.csproj", "{8F3B66C2-60D8-4CAF-91A9-2F84974379C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IServiceCollectionAndProviderDemonstration", "IServiceCollectionAndProviderDemonstration\IServiceCollectionAndProviderDemonstration.csproj", "{8F3B66C2-60D8-4CAF-91A9-2F84974379C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalBlog", "PersonalBlog\PersonalBlog.csproj", "{AA2A8709-92CE-4252-980C-88321B6476E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8F3B66C2-60D8-4CAF-91A9-2F84974379C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F3B66C2-60D8-4CAF-91A9-2F84974379C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F3B66C2-60D8-4CAF-91A9-2F84974379C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA2A8709-92CE-4252-980C-88321B6476E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2A8709-92CE-4252-980C-88321B6476E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2A8709-92CE-4252-980C-88321B6476E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2A8709-92CE-4252-980C-88321B6476E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
