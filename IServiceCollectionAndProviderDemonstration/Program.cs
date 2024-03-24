@@ -1,6 +1,13 @@
-﻿IDataAccess dataAccess = new DataAccess();
-IBusiness biz = new Business(dataAccess);
-UserInterface ui = new UserInterface(biz);
+﻿using Microsoft.Extensions.DependencyInjection;
+
+IServiceCollection collection = new ServiceCollection();
+collection.AddScoped<IDataAccess, DataAccess>();
+collection.AddScoped<IBusiness, Business>();
+collection.AddScoped<UserInterface>();
+
+IServiceProvider provider = collection.BuildServiceProvider();
+
+UserInterface ui = provider.GetService<UserInterface>();
 
 ui.Signup();
 
