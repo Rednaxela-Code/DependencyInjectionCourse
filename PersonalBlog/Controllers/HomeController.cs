@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PersonalBlog.Interface;
 using PersonalBlog.Models;
+using PersonalBlog.Services;
 using System.Diagnostics;
 using System.Linq.Expressions;
 
@@ -24,6 +25,7 @@ namespace PersonalBlog.Controllers
 
         [Route("Post")]
         [HttpGet]
+        [ServiceFilter(typeof(ProtectorAttribute))]
         public async Task<IActionResult> CreatePost(Post model)
         {
             if (!ModelState.IsValid)
@@ -34,6 +36,7 @@ namespace PersonalBlog.Controllers
         }
 
         [HttpPost]
+        [ServiceFilter(typeof(ProtectorAttribute))]
         public async Task<IActionResult> Post(Post model)
         {
             await _dataService.Create(model);

@@ -9,6 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IDynamoDBContext, DynamoDBContext>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IAuthorize, IpBasedAuthorizer>();
+builder.Services.AddScoped<ProtectorAttribute>();
 
 var app = builder.Build();
 
