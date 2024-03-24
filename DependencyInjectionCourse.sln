@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CouplingDemonstration", "De
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IServiceCollectionAndProviderDemonstration", "IServiceCollectionAndProviderDemonstration\IServiceCollectionAndProviderDemonstration.csproj", "{8F3B66C2-60D8-4CAF-91A9-2F84974379C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalBlog", "PersonalBlog\PersonalBlog.csproj", "{AA2A8709-92CE-4252-980C-88321B6476E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalBlog", "PersonalBlog\PersonalBlog.csproj", "{AA2A8709-92CE-4252-980C-88321B6476E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalResolve", "ConditionalResolve\ConditionalResolve.csproj", "{63F5391E-B842-436B-B09D-6794026DA185}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionalResolve", "ConditionalResolve\ConditionalResolve.csproj", "{63F5391E-B842-436B-B09D-6794026DA185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddKeyResolve", "AddKeyResolve\AddKeyResolve.csproj", "{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{63F5391E-B842-436B-B09D-6794026DA185}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63F5391E-B842-436B-B09D-6794026DA185}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63F5391E-B842-436B-B09D-6794026DA185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160FDB1D-9382-4D6C-9D5E-BCAE9E06E704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
