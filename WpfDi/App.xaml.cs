@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using System.Data;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
 namespace WpfDi
@@ -12,6 +11,14 @@ namespace WpfDi
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+
+            var collection = new ServiceCollection();
+            collection.AddScoped<TestClass>();
+            collection.AddTransient<MainWindow>();
+
+            var provider = collection.BuildServiceProvider();
+            var mainWindow = provider.GetRequiredService<MainWindow>();
+            mainWindow.Show();
         }
     }
 

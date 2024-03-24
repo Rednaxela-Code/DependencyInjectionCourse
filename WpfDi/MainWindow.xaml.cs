@@ -16,9 +16,19 @@ namespace WpfDi
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly TestClass _testClass;
+
+        public MainWindow(TestClass testClass)
         {
             InitializeComponent();
+            _testClass = testClass;
+
+            this.Activated += MainWindow_Activated;
+        }
+
+        private void MainWindow_Activated(object? sender, EventArgs e)
+        {
+            lblMessage.Content = _testClass.Message;
         }
     }
 }
