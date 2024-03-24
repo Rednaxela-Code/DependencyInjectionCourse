@@ -1,10 +1,14 @@
 using Amazon.DynamoDBv2.DataModel;
+using PersonalBlog.Interface;
+using PersonalBlog.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IDynamoDBContext, DynamoDBContext>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<IAuthorize, IpBasedAuthorizer>();
 
 var app = builder.Build();
 
